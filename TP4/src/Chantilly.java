@@ -2,12 +2,12 @@
 public class Chantilly extends DecorateurIngredient{
 	
 	public Chantilly(Dessert d){
-		String libelle = d.getLibelle();
+		/*String libelle = d.getLibelle();
 		if(libelle.equals(""))
 			libelle="Chantilly";
 		else
-			libelle+="/Chantilly";
-		d.setLibelle(libelle);
+			libelle+="/Chantilly";*/
+		d.setLibelle("Chantilly");
 	}
 	
 	public String getLibelle(){

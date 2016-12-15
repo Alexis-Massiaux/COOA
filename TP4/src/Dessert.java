@@ -17,7 +17,7 @@ public abstract class Dessert {
 	}
 	
 	public String getLibelle() {
-		String res="Dessert : ";
+		String res="";
 		Iterator<Dessert> it = list.iterator();
 		while(it.hasNext()){
 			res+=it.next().libelle;
@@ -45,18 +45,7 @@ public abstract class Dessert {
 	}
 	
 	public String toString(){
-		String res="Dessert : ";
-		double prix=0;
-		Iterator<Dessert> it = list.iterator();
-		while(it.hasNext()){
-			Dessert d = it.next();
-			prix+=d.getPrix();
-			res+=d.libelle;
-			if(!it.hasNext())
-				res+=";";
-		}
-		res+=" - Prix : "+prix;
-		return res;
+		return "Dessert : "+getLibelle()+" Prix : "+getPrix();
 	}
 	
 

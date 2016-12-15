@@ -2,12 +2,12 @@
 public class Chocolat extends DecorateurIngredient{
 	
 	public Chocolat(Dessert d){
-		String libelle = d.getLibelle();
+		/*String libelle = d.getLibelle();
 		if(libelle.equals(""))
 			libelle="Chocolat";
 		else
-			libelle+="/Chocolat";
-		d.setLibelle(libelle);
+			libelle+="/Chocolat";*/
+		d.setLibelle("Chocolat");
 	}
 	
 	public String getLibelle(){

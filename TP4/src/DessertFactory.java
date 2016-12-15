@@ -1,24 +1,25 @@
 
-public class DessertFactory {
+public class DessertFactory extends Dessert{
 
-	public static Dessert d=null;
-
-	public Dessert getDessert(String dessert){
+	public void getDessert(String dessert){
 		switch(dessert){
 		case "Crepe" : 
-			if(d == null)
-				d = new Crepe();
-			return d;
+			add(new Crepe());
+			break;
 		case "Gaufre":
-			if(d == null)
-				d=new Gaufre();
-			return d;
-		case "Chcocolat":
-			return new Chocolat(d);
+			add(new Gaufre());
+			break;
+		case "Chocolat":
+			if(!list.isEmpty())
+				//add(new Chocolat(list.get(list.size()-1)));
+				System.out.println(list.get(list.size()-1));
+			break;
 		case "Chantilly":
-			return new Chantilly(d);
+			if(!list.isEmpty())
+				System.out.println(list.get(list.size()-1));
+				//add(new Chantilly(list.get(list.size()-1)));
+			break;
 		}
-		return null;
 	}
 
 }
