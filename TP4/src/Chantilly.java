@@ -10,6 +10,6 @@ public class Chantilly extends DecorateurIngredient{
 	}
 	
 	public double getPrix(){
-		return getPrix();
+		return getPrix()+1;
 	}
 }

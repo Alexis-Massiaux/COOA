@@ -10,6 +10,6 @@ public class Chocolat extends DecorateurIngredient{
 	}
 	
 	public double getPrix(){
-		return getPrix();
+		return getPrix()+1;
 	}
 }

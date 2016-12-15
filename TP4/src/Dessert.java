@@ -1,8 +1,8 @@
 
 public abstract class Dessert {
 	
-	private String libelle;
-	private double prix;
+	private String libelle="";
+	private double prix=1;
 	
 	public String getLibelle() {
 		return libelle;
