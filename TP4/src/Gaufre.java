@@ -1,5 +1,5 @@
 
-public class Gaufre {
+public class Gaufre extends Dessert{
 	
 	public Gaufre(){}
 

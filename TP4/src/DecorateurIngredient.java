@@ -1,5 +1,5 @@
 
-public abstract class DecorateurIngredient {
+public abstract class DecorateurIngredient extends Dessert{
 	
 	protected Dessert dessert; 
 	

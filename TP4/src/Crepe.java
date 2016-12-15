@@ -1,5 +1,5 @@
 
-public class Crepe {
+public class Crepe extends Dessert {
 	
 	public Crepe() {}
 
