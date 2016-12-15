@@ -1,14 +1,38 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public abstract class Dessert {
 	
 	private String libelle="";
-	private double prix=1;
+	private double prix=0;
+	List<Dessert> list = new ArrayList<>();
+	
+	public void add(Dessert d){
+		list.add(d);
+	}
+	
+	public void remove(Dessert d){
+		list.remove(d);
+	}
 	
 	public String getLibelle() {
-		return libelle;
+		String res="Dessert : ";
+		Iterator<Dessert> it = list.iterator();
+		while(it.hasNext()){
+			res+=it.next().libelle;
+			if(!it.hasNext())
+				res+=";";
+		}
+		return res;
 	}
 	
 	public double getPrix(){
+		double prix=0;
+		Iterator<Dessert> it = list.iterator();
+		while(it.hasNext()){
+			prix+=it.next().getPrix();
+		}
 		return prix;
 	}
 	
@@ -16,12 +40,23 @@ public abstract class Dessert {
 		this.libelle=libelle;
 	}
 	
-	protected void setPirx(double prix){
+	protected void setPrix(double prix){
 		this.prix=prix;
 	}
 	
 	public String toString(){
-		return "Dessert : "+libelle+" ; "+prix;
+		String res="Dessert : ";
+		double prix=0;
+		Iterator<Dessert> it = list.iterator();
+		while(it.hasNext()){
+			Dessert d = it.next();
+			prix+=d.getPrix();
+			res+=d.libelle;
+			if(!it.hasNext())
+				res+=";";
+		}
+		res+=" - Prix : "+prix;
+		return res;
 	}
 	
 
