@@ -3,16 +3,22 @@ public class DessertFactory {
 
 	public static Dessert d=null;
 
-	public Dessert getDessert(){
-		if(d == null){
-			if(d.getLibelle().equals("Chocolat")){
-				d=new Chocolat(d);
-			}
-			if(d.getLibelle().equals("Chantilly")){
-				d=new Chantilly(d);
-			}
+	public Dessert getDessert(String dessert){
+		switch(dessert){
+		case "Crepe" : 
+			if(d == null)
+				d = new Crepe();
+			return d;
+		case "Gaufre":
+			if(d == null)
+				d=new Gaufre();
+			return d;
+		case "Chcocolat":
+			return new Chocolat(d);
+		case "Chantilly":
+			return new Chantilly(d);
 		}
-		return d;
+		return null;
 	}
 
 }
